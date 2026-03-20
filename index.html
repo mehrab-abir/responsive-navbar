@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Menu</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">TheLogo</a>
+            </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <span class="openMenu">
+                    <a href="#" onclick="openSideMenu();">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </span>
+
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="side-nav" id="side-menu">
+        <div class="close-btn" onclick="closeSideMenu();">&times;</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Marvel cinematic universe</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function openSideMenu() {
+            document.getElementById('side-menu').style.width = '220px';
+        }
+        function closeSideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+        }
+    </script>
+
+</body>
+
+</html>

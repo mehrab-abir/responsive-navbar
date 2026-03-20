@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    padding: 25px 0px;
+    background-color: #333333;
+}
+
+.logo a {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+nav.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: all 0.5s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.side-nav {
+    width: 0;
+    height: 100%;
+    background-color: #333333;
+    /* opacity: 0.9; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    /*or left:0;*/
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.side-nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 25px;
+}
+
+.side-nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
+.side-nav ul li a:hover {
+    color: #dddddd;
+}
+
+.openMenu {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.openMenu a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+}
+
+.openMenu a span {
+    width: 24px;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 3px;
+}
+
+.close-btn {
+    color: white;
+    font-size: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .navbar ul {
+        display: none;
+    }
+}
+
+@media (min-width:768px) {
+    .openMenu a {
+        display: none;
+    }
+}
